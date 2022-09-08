@@ -1,4 +1,5 @@
-  // import { gsap } from 'gsap';
+// testing grounds
+// import { gsap } from 'gsap';
 
   // function Cursor (){
   // let svgns = "http://www.w3.org/2000/svg";
@@ -12,7 +13,7 @@
   // };
 
   // window.addEventListener("mousemove", (event) => {
-    // pointer.x = event.clientX;
+  //   pointer.x = event.clientX;
   //   pointer.y = event.clientY;
   // });
 

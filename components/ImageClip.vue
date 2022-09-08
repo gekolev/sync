@@ -32,7 +32,7 @@
 </template>
 <script>
 export default {
-    name:"Clip",
+    name:"ImageClip",
     methods:{
         cursor: function(){
             console.log("clip works")

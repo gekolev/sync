@@ -11,11 +11,12 @@
     </div>
 </template>
 <script>
-
+//testing if gsap and vue work
 import { ref } from 'vue';
 import gsap from 'gsap';
 
 export default {
+
     setup() {
     const showTitle = ref(true)
     const beforeEnter = (el) => {
@@ -39,7 +40,5 @@ export default {
 }
 </script>
 <style lang="scss">
-    h1{
-        color:red;
-    }
+
 </style>
