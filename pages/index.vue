@@ -3,7 +3,7 @@
   <Mouse/>
   <div class="msg">
     <h1>Hey, Filip <br> there's two inner pages /clip and /scroll<br> where you can find the tasks from the email!</h1>
-    <p>Hope to head from you soon!</p>
+    <p>Hope to hear from you soon!</p>
   </div>
 </div>
 </template>
