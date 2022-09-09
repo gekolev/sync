@@ -1,20 +1,20 @@
 <template lang="">
-    <div>
+    <div class="center-holder">
         <div class="center">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
-            <rect width="50%" height="50%" fill="#E7E7E8"/>
-            <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="https://cdn11.bigcommerce.com/s-3uewkq06zr/products/315/images/514/bs_red__30528.1492536976.500.750.png?c=2" width="50%" height="50%" />
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="500px" height="500px"/>
+            <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://i.ibb.co/D5k0J2F/front-Artboard-1.png" width="500px" height="500px" />
           </svg>
           
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
               <clipPath id="mask">
-                <circle id="mask-circle" cx="50%" cy="50%" r="8%" style="fill: #ffffff"/>
+                <circle id="mask-circle" cx="50%" cy="50%" r="20%" style="fill: #ffffff"/>
               </clipPath>
             </defs>
             <g clip-path="url(#mask)">
-              <rect width="50%" height="50%" fill="#272730"/>
-              <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://images.squarespace-cdn.com/content/v1/5aa038113917eedcf3312352/1527780672674-HH4WEVTYQM6GT41VT7QF/green.png?format=2500w" width="50%" height="50%" />
+              <rect width="500px" height="500px"/>
+              <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://i.ibb.co/wYMW3W6/back-Artboard-1.png" width="500px" height="500px" />
             </g>
           </svg>
         </div>
@@ -29,8 +29,11 @@ var maskedElement = document.querySelector('#mask-circle');
 var svgPoint = svgElement.createSVGPoint();
 
 function cursorPoint(e, svg) {
-    svgPoint.x = e.clientX;
-    svgPoint.y = e.clientY;
+    let delay = 10;
+    // svgPoint.x = e.clientX;
+    // svgPoint.y = e.clientY;
+    svgPoint.x += (e.clientX - svgPoint.x) / delay;
+    svgPoint.y += (e.clientY - svgPoint.y) / delay;
     return svgPoint.matrixTransform(svg.getScreenCTM().inverse());
 }
 
@@ -43,14 +46,19 @@ window.addEventListener('mousemove', function(e) {
   update(cursorPoint(e, svgElement));
 }, false);
 
+
 }
 }
 </script>
 <style scoped lang="scss">
 .center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 10vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
 }
 svg {
     position: absolute;
@@ -59,7 +67,8 @@ svg {
     right: 0;
     bottom: 0;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 500px;
   }
+  
 </style>
